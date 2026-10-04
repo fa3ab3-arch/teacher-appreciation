@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b4e">
+<title>معلمتي الغالية | أثر لا يُنسى</title>
+<style>
+:root{--navy:#102b4e;--blue:#1c5277;--sky:#dff4ff;--gold:#f4cb79;--cream:#fffaf0;--rose:#f5dce5;--ink:#18334d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Tahoma","Arial",sans-serif;color:var(--ink);background:linear-gradient(135deg,#eff9ff,#fffaf3 52%,#f9edf2);overflow-x:hidden}
+button{font:inherit;cursor:pointer}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 15% 15%,#47799a 0 1px,transparent 2px),radial-gradient(circle at 85% 25%,#f4cb79 0 2px,transparent 3px),linear-gradient(145deg,#0c2341,#174b70 58%,#102b4e);color:white}
+.hero:before,.hero:after{content:"";position:absolute;border:1px solid #ffffff24;border-radius:50%;width:380px;height:380px;z-index:-1}
+.hero:before{top:-190px;right:-100px}.hero:after{bottom:-230px;left:-80px;width:480px;height:480px}
+.spark{position:absolute;color:var(--gold);font-size:24px;animation:twinkle 3s infinite ease-in-out}
+.s1{top:15%;left:14%}.s2{top:24%;right:12%;animation-delay:.7s}.s3{bottom:18%;left:20%;animation-delay:1.3s}.s4{bottom:25%;right:14%;animation-delay:1.8s}
+.hero-inner{max-width:850px;text-align:center;position:relative;z-index:1}
+.eyebrow{display:inline-block;border:1px solid #f4cb7977;color:#ffe7ac;border-radius:999px;padding:9px 18px;font-size:.9rem;letter-spacing:.3px;background:#ffffff0b}
+.hero h1{font-size:clamp(2.6rem,8vw,5.8rem);line-height:1.2;margin:25px 0 12px;color:#fff7e8;text-shadow:0 5px 28px #0003}
+.hero h1 span{color:var(--gold);display:block}
+.subtitle{font-size:clamp(1rem,3vw,1.35rem);line-height:2;color:#e3f3ff;max-width:680px;margin:0 auto 28px}
+.gold-line{width:95px;height:3px;background:var(--gold);margin:22px auto;border-radius:4px}
+.btn{border:0;border-radius:999px;padding:14px 23px;font-weight:700;transition:transform .2s,box-shadow .2s;display:inline-flex;align-items:center;justify-content:center;gap:9px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 9px 24px #0002}
+.btn-gold{background:linear-gradient(120deg,#ffe7a6,#eab95e);color:#102b4e}
+.btn-outline{background:transparent;border:1px solid #ffffff8a;color:white;margin-right:8px}
+.scroll-note{font-size:.85rem;color:#c5ddec;margin-top:32px}
+main{max-width:1050px;margin:auto;padding:25px 18px 65px}
+section{margin:30px 0}
+.section-heading{text-align:center;margin:55px 0 25px}
+.section-heading .mini{color:#a77725;font-weight:bold;font-size:.9rem}
+.section-heading h2{font-size:clamp(1.7rem,4vw,2.5rem);color:var(--navy);margin:10px 0}
+.section-heading p{color:#587086;line-height:1.9;margin:0 auto;max-width:680px}
+.quote-card{background:#fff;border:1px solid #e5edf2;border-radius:28px;padding:clamp(24px,5vw,48px);box-shadow:0 18px 55px #18334d0d;text-align:center;position:relative;overflow:hidden}
+.quote-card:before{content:"❝";position:absolute;top:-35px;right:20px;font-size:130px;color:#e8f5fb;font-family:Georgia}
+.quote-text{font-size:clamp(1.15rem,3.5vw,1.7rem);line-height:2.1;position:relative}
+.signature{margin-top:22px;color:#a77725;font-weight:bold}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:#ffffffd9;border:1px solid #e3edf2;border-radius:22px;padding:24px 20px;text-align:center;box-shadow:0 12px 35px #18334d08;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#e6c16f}
+.card .emoji{font-size:2.1rem;display:block;margin-bottom:12px}
+.card h3{margin:0 0 10px;color:var(--navy)}
+.card p{line-height:1.9;color:#5c7184;margin:0}
+.interactive{background:linear-gradient(135deg,#fff,#f1faff);border:1px solid #dceaf2;border-radius:28px;padding:clamp(22px,4vw,38px);text-align:center;box-shadow:0 16px 45px #18334d0a}
+.interactive h2{color:var(--navy);margin-top:0}
+.reveal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}
+.reveal{background:white;border:1px solid #dce9ef;border-radius:18px;padding:19px 12px;color:var(--navy);min-height:112px;font-weight:bold;transition:.2s}
+.reveal:hover{border-color:var(--gold);background:#fffaf0}
+.reveal .hidden-msg{display:none;font-weight:normal;line-height:1.8;margin-top:8px;color:#6c5425}
+.reveal.open{background:#fff7df;border-color:#e7c16d}
+.reveal.open .hidden-msg{display:block}
+.final-note{margin-top:20px;line-height:2;color:#49657b}
+.footer{background:var(--navy);color:#e9f5ff;text-align:center;padding:32px 18px}
+.footer strong{color:var(--gold)}
+.small{font-size:.86rem;color:#aac8dc;margin-top:9px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,120px);background:#102b4e;color:white;padding:12px 20px;border-radius:999px;box-shadow:0 10px 30px #0002;transition:transform .35s;z-index:20;max-width:90%;text-align:center}
+.toast.show{transform:translate(-50%,0)}
+.confetti{position:fixed;top:-15px;width:9px;height:14px;z-index:30;pointer-events:none;animation:fall 2.8s linear forwards}
+@keyframes twinkle{0%,100%{opacity:.45;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+@keyframes fall{to{transform:translateY(110vh) rotate(700deg);opacity:.85}}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.reveal-grid{grid-template-columns:1fr}.btn-outline{margin:10px 0 0}.hero{min-height:92vh}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="hero" id="top">
+  <span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span><span class="spark s4">✧</span>
+  <div class="hero-inner">
+    <div class="eyebrow">اليوم العالمي للمعلم · 5 أكتوبر</div>
+    <h1>معلمتي <span>الغالية</span></h1>
+    <div class="gold-line"></div>
+    <p class="subtitle">إلى من زرعت في دربي نورًا، وفي قلبي ثقة، وفي أحلامي أجنحة… هذه المساحة الصغيرة هدية تقدير لكِ، وأثرُكِ أكبر من كل الكلمات.</p>
+    <button class="btn btn-gold" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">اكتشفي رسالتي لكِ <span>↓</span></button>
+    <button class="btn btn-outline" onclick="celebrate()">اضغطي لتبدأ المفاجأة ✨</button>
+    <div class="scroll-note">صُنعت بمحبة من طالبتكِ · مرّري للأسفل</div>
+  </div>
+</header>
+<main>
+  <section id="message">
+    <div class="section-heading"><div class="mini">رسالة من القلب</div><h2>إلى معلمتي التي تصنع الفرق</h2><p>قد تكون الكلمات بسيطة، لكنها تحمل امتنانًا كبيرًا لكل ما تقدمينه.</p></div>
+    <div class="quote-card">
+      <div class="quote-text">معلمتي الغالية،<br>شكرًا لأنكِ لا تعلّمينني الدروس فقط، بل تعلّمينني كيف أثق بنفسي، وكيف أحاول من جديد، وكيف أجعل من أحلامي أهدافًا أسعى إليها.<br><strong>قد أنسى بعض ما تعلمته، لكنني لن أنسى أبدًا شعوري حين شجعتِني وآمنتِ بقدراتي.</strong></div>
+      <div class="signature">بكل الحب والامتنان، طالبتكِ 🌷</div>
+    </div>
+  </section>
+  <section>
+    <div class="section-heading"><div class="mini">أشياء تعلّمتها منكِ</div><h2>أثرُكِ باقٍ في داخلي</h2><p>كل معلمة تترك أثرًا، وأجمل الآثار هي التي ترافقنا حتى بعد انتهاء الدرس.</p></div>
+    <div class="cards">
+      <article class="card"><span class="emoji">🌱</span><h3>الثقة</h3><p>علّمتِني أن أؤمن بقدراتي، وأن الخطأ خطوة في طريق التعلّم.</p></article>
+      <article class="card"><span class="emoji">💡</span><h3>الإلهام</h3><p>جعلتِ المعرفة نافذة أطلّ منها على أفكار وفرص جديدة.</p></article>
+      <article class="card"><span class="emoji">🌟</span><h3>الأمل</h3><p>بكلماتكِ المشجعة، صار النجاح حلمًا أعمل من أجله بثقة.</p></article>
+    </div>
+  </section>
+  <section>
+    <div class="section-heading"><div class="mini">لحظة تفاعلية</div><h2>افتحي رسائل الامتنان 💌</h2><p>اضغطي على كل بطاقة لتظهري رسالة صغيرة أعددتها لكِ.</p></div>
+    <div class="interactive">
+      <h2>ثلاث رسائل لكِ يا معلمتي</h2>
+      <div class="reveal-grid">
+        <button class="reveal" onclick="toggleCard(this)">💐 شكرًا <span class="hidden-msg">شكرًا لوقتكِ وصبركِ، ولأنكِ تمنحين كل درس جزءًا من قلبكِ.</span></button>
+        <button class="reveal" onclick="toggleCard(this)">🌷 أقدّركِ <span class="hidden-msg">أقدّر جهدكِ الذي قد لا أراه كل يوم، لكنه يصنع فرقًا في مستقبلي.</span></button>
+        <button class="reveal" onclick="toggleCard(this)">✨ لن أنساكِ <span class="hidden-msg">سيبقى أثركِ الجميل معي، وسأذكر دائمًا أنكِ كنتِ جزءًا من رحلتي.</span></button>
+      </div>
+      <p class="final-note">كل عام وأنتِ مصدر علم وإلهام، وكل عام ورسالتكِ تثمر نجاحًا وأملًا.</p>
+      <button class="btn btn-gold" onclick="celebrate()">🎉 أرسل لكِ فرحتي وشكري</button>
+      <button class="btn" style="background:#eaf5fb;color:#174b70;margin-top:10px" onclick="copyMessage()">نسخ رسالة الشكر</button>
+    </div>
+  </section>
+  <section>
+    <div class="quote-card" style="background:linear-gradient(135deg,#fffaf0,#fff)">
+      <div style="font-size:2.3rem">🌹</div>
+      <h2 style="color:#102b4e">إلى معلمتي الغالية</h2>
+      <p style="font-size:1.15rem;line-height:2">لو كان للامتنان صوت، لقال اسمكِ في كل مرة تعلّمتُ فيها شيئًا جديدًا. ولو كان للأثر لون، لكان من نور عطائكِ.</p>
+      <div class="signature">شكرًا لأنكِ معلمتي</div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div style="font-size:1.5rem;margin-bottom:10px">كل عام والمعلمون والمعلمات بخير</div>
+  <strong>بصمة معلم… وأثر لا يُنسى</strong>
+  <div class="small">إهداء رقمي من طالبة إلى معلمتها · اليوم العالمي للمعلم</div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">كل عام وأنتِ مصدر إلهام يا معلمتي! 💛</div>
+<script>
+function toggleCard(el){el.classList.toggle('open');}
+function celebrate(){
+  const toast=document.getElementById('toast');toast.classList.add('show');
+  setTimeout(()=>toast.classList.remove('show'),3000);
+  const colors=['#f4cb79','#dff4ff','#f5dce5','#ffffff','#9bd4c0'];
+  for(let i=0;i<65;i++){
+    const piece=document.createElement('span');piece.className='confetti';
+    piece.style.left=Math.random()*100+'vw';piece.style.background=colors[Math.floor(Math.random()*colors.length)];
+    piece.style.animationDelay=(Math.random()*.7)+'s';piece.style.transform='rotate('+Math.random()*360+'deg)';
+    piece.style.borderRadius=Math.random()>.5?'50%':'2px';piece.style.width=(5+Math.random()*7)+'px';piece.style.height=(8+Math.random()*10)+'px';
+    document.body.appendChild(piece);setTimeout(()=>piece.remove(),3600);
+  }
+}
+function copyMessage(){
+ const text='معلمتي الغالية، شكرًا لأنكِ لا تعلّمينني الدروس فقط، بل تعلّمينني كيف أثق بنفسي، وكيف أحاول من جديد. قد أنسى بعض ما تعلمته، لكنني لن أنسى أبدًا شعوري حين شجعتِني وآمنتِ بقدراتي. كل عام وأنتِ مصدر علم وإلهام. بكل الحب والامتنان، طالبتكِ.';
+ if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>showToast('تم نسخ رسالة الشكر 💌')).catch(()=>fallbackCopy(text));}
+ else fallbackCopy(text);
+}
+function fallbackCopy(text){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');showToast('تم نسخ رسالة الشكر 💌')}catch(e){showToast('يمكنكِ تحديد الرسالة ونسخها يدويًا')}t.remove();}
+function showToast(msg){const toast=document.getElementById('toast');toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+</script>
+</body>
+</html>
